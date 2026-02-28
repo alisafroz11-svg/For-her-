@@ -35,7 +35,9 @@ p{
   font-style:italic;
   margin:20px 0;
 }
-
+.hidden{
+  display:none;
+}
 .big{
   font-size:18px;
   font-weight:bold;
