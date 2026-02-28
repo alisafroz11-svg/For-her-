@@ -1,3 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You 💕</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#fce4ec,#fff3e0);
+  font-family:Arial;
+}
+
+.card{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  text-align:center;
+  width:320px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.hidden{
+  display:none;
+}
+
+h1{
+  color:#d81b60;
+}
+
+button{
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:#f48fb1;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
 <div id="page1" class="card">
   <h1>Hey Cutiepie 💕</h1>
   <p>I made something special just for you.</p>
@@ -12,27 +60,32 @@
 
 <div id="page3" class="card hidden">
   <h1>A Little Quote ✨</h1>
-  <p class="quote">
-    "If I had to choose again,  
-    I would still choose you every single time."
-  </p>
+  <p>"If I had to choose again, I would still choose you every single time."</p>
   <button onclick="next(3)">Next 🌹</button>
 </div>
 
 <div id="page4" class="card hidden">
   <h1>From My Heart 💌</h1>
-  <p>
-    You make my world brighter,  
-    my heart calmer,  
-    and my days happier.
-  </p>
+  <p>You make my world brighter, my heart calmer, and my days happier.</p>
   <button onclick="next(4)">Final Surprise 🎁</button>
 </div>
 
 <div id="page5" class="card hidden">
   <h1>Just One Thing 🥺</h1>
-  <p class="big">
-    Will you always stay by my side? 💕
-  </p>
+  <p>Will you always stay by my side? 💕</p>
   <button onclick="love()">Yes ❤️</button>
 </div>
+
+<script>
+function next(page){
+  document.getElementById("page"+page).classList.add("hidden");
+  document.getElementById("page"+(page+1)).classList.remove("hidden");
+}
+
+function love(){
+  alert("You just made me the happiest person alive 💖🥺");
+}
+</script>
+
+</body>
+</html>
